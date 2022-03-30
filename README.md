@@ -17,7 +17,7 @@ For more information on PLUGIN and ADVANCED settings, please visit
 
 
 ### CIE Pipeline example
-```yaml
+```commandline
 - step:
     type: Plugin
     name: "Windows Remote Execution"
@@ -35,7 +35,7 @@ For more information on PLUGIN and ADVANCED settings, please visit
             COMMAND2: 'powershell -command "$result = Invoke-WebRequest -URI https://www.harness.io/; $result | % ToString"'
             repo: "https://github.com/diegopereiraeng/DiegoFrameworkWebApplication"
             git_clone_folder: "C:\Builds\diego_pereira"
-
+```
 ### Testing the docker image:
 ```commandline
 docker run --rm \

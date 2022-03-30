@@ -54,9 +54,7 @@ def main():
             print('Moving Existing App Folder: '+GIT_CLONE_FOLDER+'\\'+REPO_FOLDER+' to c:/Temp: ')
             std_out, std_err, status_code =  winRMCommand("Temp Cleaner", 'move '+GIT_CLONE_FOLDER+'\\'+REPO_FOLDER+' C:\\temp')
 
-            if status_code != 0:
-                print("Error on step: Move to Temp")
-                exit(2)
+            
 
 
             print('Cloning Repo: '+REPO) 
