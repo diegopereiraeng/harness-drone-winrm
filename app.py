@@ -19,8 +19,6 @@ COMMAND2 = os.environ.get('PLUGIN_COMMAND2') or "ignore"
 COMMAND3 = os.environ.get('PLUGIN_COMMAND3') or "ignore"
 COMMAND4 = os.environ.get('PLUGIN_COMMAND4') or "ignore"
 
-
-
 def winRMCommand(name,command):
     # NTLM Auth
     p = Protocol(
@@ -40,7 +38,7 @@ def winRMCommand(name,command):
 
 
 def main():
-    if TRANSPORT == 'ntlm':
+    if TRANSPORT != 'basic':
         # NTLM Auth
         p = Protocol(
             endpoint=ENDPOINT,
@@ -98,8 +96,6 @@ def main():
         p.close_shell(shell_id)
 
 
-
-
     if TRANSPORT == 'basic':
         # Basic Auth
         session = winrm.Session(ENDPOINT, auth=(USERNAME,PASSWORD))
@@ -109,7 +105,7 @@ def main():
         print(result.status_code)
         print(result.std_out)
 
-        result = session.run_cmd("netstat", ["-an"])
+        result = session.run_ps(COMMAND)
 
         print(result.status_code)
         print(result.std_out)

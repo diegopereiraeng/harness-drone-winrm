@@ -12,7 +12,7 @@ For more information on WinRM, please visit
 
 
 For more information on PLUGIN and ADVANCED settings, please visit
-[DOCUMENTATION](https://).
+[DOCUMENTATION](https://github.com/diegopereiraeng/harness-drone-winrm/blob/main/DOCS.MD).
 
 
 
