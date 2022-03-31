@@ -24,7 +24,7 @@ For more information on PLUGIN and ADVANCED settings, please visit
     identifier: WinRM_Command
     spec:
         connectorRef: account.DockerHubDiego
-        image: diegokoala/harness-drone-winrm:1.0.0
+        image: diegokoala/harness-drone-winrm:stable
         privileged: false
         settings:
             endpoint: "https://10.15.17.52:5986/wsman"
@@ -51,5 +51,5 @@ docker run --rm \
   -e PLUGIN_REPO="https://github.com/diegopereiraeng/DiegoFrameworkWebApplication" \
   -e PLUGIN_REPO_FOLDER="DiegoFrameworkWebApplication" \
   -e PLUGIN_GIT_CLONE_FOLDER="C:\Users\diego_pereira\Desktop" \
-  diegokoala/harness-drone-winrm
+  diegokoala/harness-drone-winrm:stable
 
