@@ -1,4 +1,4 @@
-FROM python:3.7.5-slim
+FROM python:alpine3.15
 
 RUN mkdir /opt/app
 COPY app.py /opt/app
